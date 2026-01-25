@@ -1,0 +1,114 @@
+:root{
+  --primary:#124E8C;
+  --cta:#FF7A00;
+
+  --bg:#f6f8fc;
+  --paper:#ffffff;
+  --text:#0b1220;
+  --muted:rgba(11,18,32,.72);
+  --line:rgba(11,18,32,.12);
+
+  --shadow:0 16px 48px rgba(11,18,32,.10);
+  --radius:18px;
+  --max:1120px;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+}
+
+.container{width:min(var(--max),calc(100% - 48px));margin:auto;}
+.narrow{width:min(900px,calc(100% - 48px));margin:auto;}
+.muted{color:var(--muted);}
+
+.topstrip{
+  background:var(--primary);
+  color:#fff;
+  font-size:13px;
+}
+.topstrip__inner{padding:10px 0;text-align:center;}
+
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+}
+.header__inner{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo__name{font-weight:800;}
+.logo__tag{font-size:12px;color:var(--muted);}
+
+.nav__menu{display:flex;gap:18px;}
+.nav__toggle{display:none;}
+
+.btn{
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  border:1px solid transparent;
+}
+.btn--cta{
+  background:var(--cta);
+  color:#fff;
+}
+.btn--outline{
+  background:#fff;
+  border-color:var(--line);
+}
+.btn--block{width:100%;}
+
+.hero{padding:42px 0;}
+.hero__content{
+  background:#fff;
+  padding:26px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.hero h1{
+  font-family:"Source Sans 3",Inter,sans-serif;
+  font-size:clamp(28px,3.2vw,44px);
+}
+
+.section{padding:34px 0;}
+.section--alt{background:rgba(18,78,140,.04);}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.contact__box{
+  background:#fff;
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.contact-actions{text-align:center;}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:18px 0;
+}
+.footer__inner{
+  display:flex;
+  justify-content:space-between;
+}
