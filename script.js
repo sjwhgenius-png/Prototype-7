@@ -1,22 +1,13 @@
 const toggleBtn = document.querySelector(".nav__toggle");
-const navMenu = document.getElementById("navMenu");
-
-function setMenu(open) {
-  if (!toggleBtn || !navMenu) return;
-  navMenu.classList.toggle("is-open", open);
-  toggleBtn.setAttribute("aria-expanded", String(open));
-}
+const navMenu = document.querySelector("#navMenu");
 
 if (toggleBtn && navMenu) {
   toggleBtn.addEventListener("click", () => {
-    setMenu(!navMenu.classList.contains("is-open"));
-  });
-
-  navMenu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => setMenu(false));
+    navMenu.classList.toggle("is-open");
   });
 }
 
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
+
 
