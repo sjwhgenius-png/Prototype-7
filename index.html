@@ -4,54 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cromer Honey Farm | Pure Local Honey in Vineyard NSW</title>
-  <meta name="description" content="Cromer Honey Farm is a local honey producer in Vineyard, New South Wales, offering pure Australian honey with a warm farm-to-table touch." />
+  <meta name="description" content="Cromer Honey Farm is a local honey producer in Vineyard, New South Wales, offering pure Australian honey with a warm premium farm-to-table feel." />
   <meta name="theme-color" content="#a86c13" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fffaf2;
-      --bg-soft: #fff3d8;
-      --card: rgba(255, 255, 255, 0.82);
-      --card-solid: #ffffff;
-      --text: #35210b;
-      --muted: #72542a;
-      --accent: #c88716;
-      --accent-deep: #8c5c0e;
-      --line: rgba(161, 110, 22, 0.18);
-      --shadow: 0 20px 60px rgba(120, 77, 10, 0.14);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
+      --bg: #fff9f0;
+      --bg-2: #fff2d2;
+      --bg-3: #f8df9a;
+      --white: #ffffff;
+      --text: #261505;
+      --muted: #6d4d23;
+      --soft: #8f6b37;
+      --line: rgba(120, 77, 18, 0.14);
+      --gold: #d79d25;
+      --gold-deep: #9f6611;
+      --gold-soft: #ffe3a1;
+      --brown: #4a2a08;
+      --brown-2: #73440c;
+      --shadow-xl: 0 30px 80px rgba(105, 67, 9, 0.18);
+      --shadow-lg: 0 20px 50px rgba(105, 67, 9, 0.12);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
       --radius-md: 18px;
-      --max: 1200px;
+      --max: 1220px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(255, 214, 107, 0.55), transparent 28%),
-        radial-gradient(circle at 85% 10%, rgba(255, 191, 73, 0.38), transparent 22%),
-        linear-gradient(180deg, #fff7e7 0%, #fffaf2 46%, #fff7ea 100%);
+        radial-gradient(circle at 15% 0%, rgba(255, 211, 97, 0.34), transparent 22%),
+        radial-gradient(circle at 95% 8%, rgba(255, 187, 70, 0.24), transparent 18%),
+        linear-gradient(180deg, #fff8e8 0%, #fffaf2 34%, #fff6e7 100%);
       line-height: 1.55;
+      overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 26px 26px;
+      opacity: 0.22;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 70%);
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(var(--max), calc(100% - 40px));
@@ -61,10 +71,10 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(255, 250, 242, 0.78);
-      border-bottom: 1px solid rgba(161, 110, 22, 0.08);
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(255, 249, 240, 0.72);
+      border-bottom: 1px solid rgba(120, 77, 18, 0.08);
     }
 
     .nav {
@@ -79,53 +89,54 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
     }
 
     .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, #f2c24d, #a86c13);
-      box-shadow: 0 12px 30px rgba(168, 108, 19, 0.22);
+      font-size: 22px;
       color: white;
-      font-size: 20px;
+      background: linear-gradient(135deg, #f2bd48, #a86c13 70%);
+      box-shadow: 0 14px 34px rgba(168,108,19,0.24);
     }
 
     .brand-copy small {
       display: block;
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: 2px;
     }
 
-    .brand-copy span {
+    .brand-copy strong {
       display: block;
       font-size: 18px;
+      letter-spacing: -0.03em;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .nav-links a {
-      font-size: 14px;
-      color: var(--muted);
       padding: 10px 14px;
       border-radius: 999px;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 14px;
       transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      background: rgba(200, 135, 22, 0.08);
+      background: rgba(215,157,37,0.08);
       color: var(--text);
     }
 
@@ -134,37 +145,53 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 22px;
+      padding: 15px 22px;
       border-radius: 999px;
       border: 1px solid transparent;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      font-weight: 800;
+      transition: 0.25s ease;
       cursor: pointer;
+      box-shadow: none;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #3f2809, #7d4e0c 60%, #c88716);
       color: white;
-      box-shadow: 0 16px 35px rgba(123, 78, 12, 0.24);
+      background: linear-gradient(135deg, #442607, #83500f 55%, #d79d25);
+      box-shadow: 0 18px 36px rgba(123, 78, 12, 0.22);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.72);
-      border-color: rgba(140, 92, 14, 0.2);
+      background: rgba(255,255,255,0.78);
       color: var(--text);
+      border-color: rgba(120, 77, 18, 0.12);
+      box-shadow: 0 10px 30px rgba(115,68,12,0.08);
     }
 
     .hero {
-      padding: 54px 0 34px;
+      position: relative;
+      padding: 44px 0 34px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: 20px;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,213,105,0.34), rgba(255,213,105,0) 65%);
+      filter: blur(12px);
+      pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 34px;
       align-items: center;
     }
@@ -174,61 +201,74 @@
       align-items: center;
       gap: 10px;
       padding: 10px 16px;
-      border: 1px solid rgba(168, 108, 19, 0.18);
-      background: rgba(255,255,255,0.74);
       border-radius: 999px;
+      border: 1px solid rgba(120, 77, 18, 0.14);
+      background: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
       color: var(--muted);
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 10px 26px rgba(110, 77, 15, 0.06);
+      box-shadow: 0 10px 24px rgba(105,67,9,0.06);
+    }
+
+    h1, h2.display {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      letter-spacing: -0.04em;
+      line-height: 0.94;
+      margin: 18px 0 18px;
     }
 
     h1 {
-      font-size: clamp(44px, 7vw, 84px);
-      line-height: 0.96;
-      letter-spacing: -0.05em;
-      margin: 20px 0 18px;
+      font-size: clamp(58px, 9vw, 110px);
+      max-width: 780px;
     }
 
     .hero p.lead {
-      font-size: clamp(18px, 2vw, 22px);
-      color: var(--muted);
-      max-width: 720px;
+      max-width: 700px;
       margin: 0 0 28px;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.75;
+      color: var(--muted);
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
-    .stats {
+    .hero-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
 
-    .stat-card, .card, .feature, .contact-card {
+    .mini-card,
+    .panel,
+    .feature,
+    .product,
+    .contact-box,
+    .gallery-card,
+    .quote-card {
       border: 1px solid var(--line);
-      background: var(--card);
-      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.76);
       backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-lg);
     }
 
-    .stat-card {
-      border-radius: var(--radius-md);
+    .mini-card {
+      border-radius: 20px;
       padding: 18px;
     }
 
     .label {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      color: var(--soft);
+      margin-bottom: 10px;
     }
 
     .value {
@@ -237,248 +277,430 @@
       line-height: 1.35;
     }
 
-    .showcase {
+    .hero-visual {
       position: relative;
-      min-height: 580px;
+      min-height: 640px;
     }
 
-    .showcase-main {
+    .hero-panel {
       position: relative;
       z-index: 2;
-      border-radius: 36px;
+      height: 100%;
+      min-height: 600px;
+      border-radius: 38px;
       overflow: hidden;
-      border: 1px solid rgba(161, 110, 22, 0.18);
-      box-shadow: 0 30px 80px rgba(131, 81, 12, 0.22);
-      background: linear-gradient(145deg, #4f320d 0%, #895710 48%, #d99b1f 100%);
-      color: white;
+      background:
+        linear-gradient(145deg, rgba(70,40,8,0.94), rgba(121,74,12,0.94) 45%, rgba(217,157,37,0.92) 100%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 24%);
+      border: 1px solid rgba(120, 77, 18, 0.18);
+      box-shadow: 0 36px 90px rgba(108,67,12,0.24);
       padding: 34px;
-      min-height: 520px;
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      isolation: isolate;
     }
 
-    .showcase-main::before,
-    .showcase-main::after {
+    .hero-panel::before {
       content: "";
       position: absolute;
+      inset: auto auto 72px -40px;
+      width: 280px;
+      height: 280px;
       border-radius: 999px;
-      pointer-events: none;
+      background: rgba(255,255,255,0.08);
+      filter: blur(4px);
+      z-index: -1;
     }
 
-    .showcase-main::before {
-      width: 240px;
-      height: 240px;
-      background: rgba(255, 228, 150, 0.16);
-      top: -80px;
-      right: -50px;
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 230px;
+      height: 230px;
+      border-radius: 999px;
+      background: rgba(255,230,154,0.18);
       filter: blur(6px);
+      z-index: -1;
     }
 
-    .showcase-main::after {
-      width: 180px;
-      height: 180px;
-      background: rgba(255,255,255,0.08);
-      left: -30px;
-      bottom: -30px;
+    .panel-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
     }
 
-    .mini-tag {
+    .badge {
       display: inline-flex;
-      width: fit-content;
-      padding: 9px 14px;
-      border: 1px solid rgba(255,255,255,0.16);
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      color: #ffecb7;
       font-size: 12px;
-      letter-spacing: 0.18em;
+      font-weight: 800;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      font-weight: 700;
+      background: rgba(255,255,255,0.09);
+      color: #ffe8a8;
+      border: 1px solid rgba(255,255,255,0.12);
+      width: fit-content;
     }
 
-    .showcase-main h2 {
-      font-size: clamp(28px, 4vw, 46px);
-      line-height: 1.02;
-      margin: 18px 0 12px;
-      max-width: 440px;
-      position: relative;
-      z-index: 1;
+    .panel-note {
+      max-width: 120px;
+      text-align: right;
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(255,240,205,0.9);
     }
 
-    .showcase-main p {
-      color: rgba(255, 244, 215, 0.95);
+    .hero-panel h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin: 18px 0 14px;
       max-width: 470px;
-      font-size: 17px;
-      position: relative;
-      z-index: 1;
     }
 
-    .metric-row {
+    .hero-panel p {
+      max-width: 460px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(255,245,221,0.95);
+      margin: 0;
+    }
+
+    .metric-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      position: relative;
-      z-index: 1;
     }
 
     .metric {
       padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.11);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
     .metric strong {
       display: block;
-      font-size: 28px;
-      line-height: 1;
+      font-size: 30px;
       margin-bottom: 8px;
+      line-height: 1;
     }
 
-    .floating-note {
+    .metric span {
+      color: rgba(255,243,214,0.92);
+      font-size: 14px;
+    }
+
+    .floating-card {
       position: absolute;
-      bottom: 14px;
       right: -10px;
+      bottom: 26px;
       z-index: 3;
-      background: rgba(255,255,255,0.94);
-      color: var(--text);
-      border: 1px solid rgba(161, 110, 22, 0.12);
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(91, 63, 10, 0.16);
-      padding: 18px 20px;
       max-width: 250px;
+      border-radius: 26px;
+      padding: 18px 18px 16px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(120, 77, 18, 0.12);
+      box-shadow: 0 26px 50px rgba(90,54,7,0.14);
     }
 
-    .section {
-      padding: 34px 0 22px;
+    .floating-card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .floating-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 30px 0;
     }
 
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: end;
-      gap: 20px;
+      gap: 24px;
       margin-bottom: 22px;
     }
 
-    .section-head h3,
     .section-head h2 {
-      margin: 8px 0 0;
-      font-size: clamp(32px, 4vw, 52px);
-      line-height: 1.02;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 0.95;
       letter-spacing: -0.04em;
+      margin: 4px 0 0;
     }
 
     .section-copy {
-      max-width: 650px;
+      max-width: 640px;
       color: var(--muted);
       font-size: 18px;
+      line-height: 1.8;
     }
 
-    .features,
-    .products,
-    .grid-2,
+    .feature-grid,
+    .product-grid,
+    .gallery-grid,
+    .info-grid,
     .footer-grid {
       display: grid;
       gap: 18px;
     }
 
-    .features {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .products {
+    .feature-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
     .feature,
-    .card,
-    .contact-card {
-      border-radius: var(--radius-lg);
-      padding: 26px;
+    .product,
+    .gallery-card,
+    .quote-card,
+    .contact-box {
+      border-radius: 28px;
+      padding: 28px;
     }
 
-    .icon-box {
-      width: 56px;
-      height: 56px;
+    .icon {
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
       border-radius: 18px;
-      background: linear-gradient(135deg, #fff2c9, #ffe19a);
-      color: var(--accent-deep);
+      background: linear-gradient(135deg, #fff0be, #ffd97c);
+      color: var(--gold-deep);
+      box-shadow: inset 0 0 0 1px rgba(120,77,18,0.08);
+      font-size: 24px;
       margin-bottom: 18px;
-      box-shadow: inset 0 0 0 1px rgba(168, 108, 19, 0.08);
     }
 
-    .feature h4,
-    .card h4 {
+    .feature h3,
+    .product h3,
+    .contact-box h3,
+    .quote-card h3 {
       margin: 0 0 10px;
-      font-size: 22px;
-      letter-spacing: -0.02em;
+      font-size: 24px;
+      letter-spacing: -0.03em;
     }
 
     .feature p,
-    .card p,
-    .contact-card p,
-    .text-muted {
-      color: var(--muted);
-    }
-
-    .feature p,
-    .card p {
+    .product p,
+    .contact-box p,
+    .quote-card p {
       margin: 0;
+      color: var(--muted);
       font-size: 16px;
+      line-height: 1.8;
     }
 
-    .band {
-      margin: 34px 0 8px;
-      padding: 28px;
-      border-radius: 36px;
-      background: linear-gradient(135deg, rgba(253, 239, 197, 0.95), rgba(255, 247, 226, 0.95));
-      border: 1px solid rgba(161, 110, 22, 0.12);
-      box-shadow: var(--shadow);
+    .statement {
+      margin: 18px 0 8px;
+      padding: 30px;
+      border-radius: 34px;
+      background: linear-gradient(135deg, rgba(255,238,190,0.92), rgba(255,249,231,0.96));
+      border: 1px solid rgba(120, 77, 18, 0.1);
+      box-shadow: var(--shadow-lg);
     }
 
-    .band-grid {
+    .statement-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 24px;
       align-items: center;
     }
 
-    .quote {
-      font-size: clamp(24px, 3vw, 38px);
-      line-height: 1.08;
+    .statement-quote {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 0.96;
       letter-spacing: -0.04em;
-      margin: 10px 0 0;
+      margin: 6px 0 0;
     }
 
-    .grid-2 {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product {
+      position: relative;
+      overflow: hidden;
+      min-height: 280px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,247,224,0.96));
+    }
+
+    .product::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      width: 140px;
+      height: 140px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,214,104,0.28), rgba(255,214,104,0) 70%);
+    }
+
+    .product .product-tag {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(215,157,37,0.1);
+      color: var(--gold-deep);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 18px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      align-items: stretch;
+    }
+
+    .gallery-card {
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(140deg, rgba(77,42,7,0.96), rgba(141,90,17,0.92) 58%, rgba(226,166,44,0.92));
+      color: white;
+    }
+
+    .gallery-card.light {
+      background: linear-gradient(140deg, rgba(255,248,230,0.92), rgba(255,238,198,0.96));
+      color: var(--text);
+    }
+
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .gallery-card.light::before {
+      background: rgba(255,208,96,0.18);
+    }
+
+    .gallery-card h3 {
+      margin: 0 0 12px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 40px;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .gallery-card p {
+      margin: 0;
+      line-height: 1.8;
+      max-width: 420px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.12);
+      color: inherit;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .gallery-card.light .pill {
+      background: rgba(215,157,37,0.1);
+      border-color: rgba(120,77,18,0.08);
+    }
+
+    .info-grid {
       grid-template-columns: 1.05fr 0.95fr;
       align-items: stretch;
     }
 
-    .contact-panel {
-      background: linear-gradient(160deg, #392208 0%, #6c430d 58%, #b97915 100%);
-      color: white;
-      border-radius: 32px;
-      padding: 30px;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 28px 70px rgba(109, 67, 13, 0.28);
+    .quote-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,247,228,0.96));
     }
 
-    .contact-panel .text-muted,
-    .contact-panel p,
-    .contact-panel .contact-meta {
-      color: rgba(255, 242, 206, 0.94);
+    .quote-stars {
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      color: #d89f25;
+      margin-bottom: 14px;
+    }
+
+    .quote-big {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
+    }
+
+    .sub-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .sub-card {
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.62);
+      border: 1px solid rgba(120,77,18,0.08);
+    }
+
+    .sub-card strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .contact-box {
+      background: linear-gradient(160deg, #382006 0%, #69400a 54%, #bb7c15 100%);
+      color: white;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .contact-box .label,
+    .contact-box p,
+    .contact-box .contact-meta {
+      color: rgba(255,240,204,0.94);
     }
 
     .contact-list {
       display: grid;
-      gap: 16px;
-      margin: 22px 0 26px;
+      gap: 14px;
+      margin: 22px 0 24px;
     }
 
     .contact-item {
@@ -495,15 +717,14 @@
     }
 
     footer {
-      margin-top: 36px;
-      padding: 30px 0 46px;
+      padding: 26px 0 48px;
     }
 
     .footer-grid {
       grid-template-columns: 1fr auto;
       align-items: center;
-      padding-top: 22px;
-      border-top: 1px solid rgba(161, 110, 22, 0.12);
+      padding-top: 24px;
+      border-top: 1px solid rgba(120,77,18,0.1);
       color: var(--muted);
     }
 
@@ -513,38 +734,37 @@
       gap: 14px;
     }
 
-    .footer-links a:hover {
-      color: var(--text);
-    }
+    .footer-links a:hover { color: var(--text); }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1120px) {
       .hero-grid,
-      .grid-2,
-      .band-grid {
+      .statement-grid,
+      .info-grid,
+      .gallery-grid {
         grid-template-columns: 1fr;
       }
 
-      .showcase {
+      .hero-visual {
         min-height: auto;
       }
 
-      .floating-note {
+      .floating-card {
         position: static;
         margin-top: 16px;
         max-width: none;
       }
     }
 
-    @media (max-width: 900px) {
-      .features,
-      .products,
-      .stats {
+    @media (max-width: 920px) {
+      .feature-grid,
+      .product-grid,
+      .hero-strip {
         grid-template-columns: 1fr;
       }
 
       .section-head {
-        align-items: start;
         flex-direction: column;
+        align-items: start;
       }
 
       .nav {
@@ -558,54 +778,39 @@
     }
 
     @media (max-width: 640px) {
-      .container {
-        width: min(var(--max), calc(100% - 24px));
-      }
-
-      .hero {
-        padding-top: 26px;
-      }
-
+      .container { width: min(var(--max), calc(100% - 24px)); }
+      .hero { padding-top: 24px; }
+      .hero-panel,
       .feature,
-      .card,
-      .contact-card,
-      .contact-panel,
-      .showcase-main,
-      .band {
-        padding: 22px;
-      }
-
-      .nav-links {
-        gap: 8px;
-      }
+      .product,
+      .gallery-card,
+      .quote-card,
+      .contact-box,
+      .statement,
+      .mini-card { padding: 22px; }
 
       .nav-links a,
-      .btn {
-        width: 100%;
-      }
+      .btn { width: 100%; }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
+      .footer-grid { grid-template-columns: 1fr; gap: 16px; }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Cromer Honey Farm home">
+      <a class="brand" href="#top" aria-label="Cromer Honey Farm Home">
         <div class="brand-mark">🐝</div>
         <div class="brand-copy">
-          <small>New South Wales</small>
-          <span>Cromer Honey Farm</span>
+          <small>Vineyard, NSW</small>
+          <strong>Cromer Honey Farm</strong>
         </div>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
+      <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="#range">Range</a>
+        <a href="#visit">Visit</a>
         <a class="btn btn-primary" href="tel:0400025505">Call Now</a>
       </nav>
     </div>
@@ -615,155 +820,201 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">⭐ 5.0 rating · Local honey producer in New South Wales</div>
-          <h1>Pure local honey with genuine farm character.</h1>
+          <div class="eyebrow">⭐ 5.0 rating · Honey producer in New South Wales</div>
+          <h1>Golden, local, and beautifully simple.</h1>
           <p class="lead">
-            Cromer Honey Farm brings the warmth of a local NSW honey producer to Vineyard,
-            with beautifully simple, pure Australian honey and a welcoming small-business feel.
+            Cromer Honey Farm is a warm local honey business in Vineyard, NSW, offering pure Australian honey with a farm-made feel, premium presentation, and easy direct contact for local customers.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="tel:0400025505">Call 0400 025 505</a>
-            <a class="btn btn-secondary" href="https://www.facebook.com/cromerhoneyfarm" target="_blank" rel="noreferrer">Visit Facebook</a>
+            <a class="btn btn-secondary" href="https://www.facebook.com/cromerhoneyfarm" target="_blank" rel="noreferrer">View Facebook</a>
           </div>
 
-          <div class="stats">
-            <div class="stat-card">
+          <div class="hero-strip">
+            <div class="mini-card">
               <div class="label">Address</div>
               <div class="value">225 Windsor Rd, Vineyard NSW 2765</div>
             </div>
-            <div class="stat-card">
-              <div class="label">Phone</div>
-              <div class="value">0400 025 505</div>
+            <div class="mini-card">
+              <div class="label">Business Type</div>
+              <div class="value">Local honey producer</div>
             </div>
-            <div class="stat-card">
-              <div class="label">Profile</div>
-              <div class="value">Pure local Australian honey</div>
+            <div class="mini-card">
+              <div class="label">Community Feel</div>
+              <div class="value">Small farm warmth with premium style</div>
             </div>
           </div>
         </div>
 
-        <div class="showcase" aria-hidden="true">
-          <div class="showcase-main">
+        <div class="hero-visual">
+          <div class="hero-panel">
             <div>
-              <div class="mini-tag">Hand packed · Local · Pure</div>
-              <h2>A premium static homepage you can paste straight into GitHub.</h2>
+              <div class="panel-top">
+                <div class="badge">Hand packed · local · pure</div>
+                <div class="panel-note">Single-file premium design for GitHub Pages</div>
+              </div>
+              <h2>A final-look homepage with luxury honey brand energy.</h2>
               <p>
-                Single-file HTML, strong visual hierarchy, soft golden gradients, and a clean layout built to look polished on GitHub Pages or any simple static host.
+                Built to feel rich, polished, and customer-ready while staying easy to paste into one <strong>index.html</strong> file with no framework, no build tools, and no extra setup.
               </p>
             </div>
 
-            <div class="metric-row">
+            <div class="metric-grid">
               <div class="metric">
                 <strong>100%</strong>
-                <span>Honey-focused local business feel</span>
+                <span>Pure local honey positioning</span>
               </div>
               <div class="metric">
                 <strong>NSW</strong>
-                <span>Based in Vineyard for local customers</span>
+                <span>Based in Vineyard for local buyers</span>
               </div>
             </div>
           </div>
 
-          <div class="floating-note">
-            <div class="label">Ready to expand</div>
-            Add real product photos, market dates, jars, gift packs, or delivery info later without redesigning the page.
+          <div class="floating-card">
+            <div class="label">Ready for next step</div>
+            <strong>Drop in real photos later</strong>
+            <p>Add jar shots, market images, gift packs, or a logo without changing the layout.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section id="about">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="label">Why it works</div>
-            <h2>Made to feel trustworthy, warm, and premium.</h2>
+            <div class="label">Brand direction</div>
+            <h2>Designed to feel warm, premium, and trustworthy.</h2>
           </div>
           <p class="section-copy">
-            The design keeps the brand approachable for local buyers while still looking elevated enough to feel professional, gift-worthy, and memorable.
+            This version pushes the site closer to a finished luxury small-business look, with elegant typography, richer contrast, layered cards, and better visual hierarchy for real customer traffic.
           </p>
         </div>
 
-        <div class="features">
+        <div class="feature-grid">
           <article class="feature">
-            <div class="icon-box">🍯</div>
-            <h4>Pure Honey Focus</h4>
-            <p>Clear, simple messaging that keeps the attention on honest local honey and a straightforward farm identity.</p>
+            <div class="icon">🍯</div>
+            <h3>Pure Honey Focus</h3>
+            <p>Clear copy and premium styling keep the attention on honest local honey rather than clutter or generic filler.</p>
           </article>
           <article class="feature">
-            <div class="icon-box">📍</div>
-            <h4>Strong Local Presence</h4>
-            <p>Address, phone, and contact pathways are prominent so nearby customers can quickly take action.</p>
+            <div class="icon">📍</div>
+            <h3>Built for Local Discovery</h3>
+            <p>Direct contact details, strong location cues, and simple call actions make the page practical as well as beautiful.</p>
           </article>
           <article class="feature">
-            <div class="icon-box">✨</div>
-            <h4>GitHub Friendly</h4>
-            <p>No frameworks, no build step, and no setup required. Drop it in as <code>index.html</code> and publish.</p>
+            <div class="icon">✨</div>
+            <h3>Paste-and-Publish Setup</h3>
+            <p>Still just one HTML file, so you can drop it into GitHub as <code>index.html</code> and launch fast.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="products">
+    <section id="range">
       <div class="container">
-        <div class="band">
-          <div class="band-grid">
+        <div class="statement">
+          <div class="statement-grid">
             <div>
-              <div class="label">Product-ready layout</div>
-              <div class="quote">Simple sections now, easy product expansion later.</div>
+              <div class="label">Product-ready website</div>
+              <div class="statement-quote">Simple now. Gorgeous later. Easy to expand anytime.</div>
             </div>
-            <p class="text-muted">
-              You can swap the placeholder copy below with real product sizes, pricing, market availability, or gift pack details whenever you want.
+            <p class="section-copy" style="max-width:none; margin:0;">
+              Use these sections for honey jars, honeycomb, gifts, farm favourites, or seasonal offers. The structure already feels complete, so adding real products later will be straightforward.
             </p>
           </div>
         </div>
 
-        <div class="products">
-          <article class="card">
-            <div class="icon-box">🌼</div>
-            <h4>Pure Local Honey</h4>
-            <p>Rich, golden honey presented with clean and honest copy that suits a local farm brand.</p>
+        <div class="product-grid">
+          <article class="product">
+            <div class="icon">🌼</div>
+            <h3>Pure Local Honey</h3>
+            <p>A polished section for your flagship honey range, with room for sizes, tasting notes, or price points.</p>
+            <div class="product-tag">Core product</div>
           </article>
-          <article class="card">
-            <div class="icon-box">🧺</div>
-            <h4>Honeycomb & Gifts</h4>
-            <p>A flexible card for honeycomb, gift bundles, hampers, or market specials.</p>
+          <article class="product">
+            <div class="icon">🧺</div>
+            <h3>Honeycomb & Gift Packs</h3>
+            <p>Perfect for market bundles, gift-ready boxes, and elevated product presentation for social buyers.</p>
+            <div class="product-tag">Gift-ready</div>
           </article>
-          <article class="card">
-            <div class="icon-box">🐝</div>
-            <h4>Farm Favourites</h4>
-            <p>Perfect for future additions like beeswax items, seasonal lines, or featured local produce.</p>
+          <article class="product">
+            <div class="icon">🐝</div>
+            <h3>Farm Favourites</h3>
+            <p>Use this space for beeswax products, special releases, seasonal collections, or featured items.</p>
+            <div class="product-tag">Flexible section</div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container grid-2">
-        <article class="contact-card">
-          <div class="label">Website notes</div>
-          <h2 style="margin: 6px 0 14px; font-size: clamp(30px, 4vw, 50px); line-height: 1.02; letter-spacing: -0.04em;">Everything in one file. Easy to paste, edit, and publish.</h2>
-          <p style="font-size: 18px; margin: 0 0 18px;">
-            This page is intentionally built as a clean static site for GitHub. You can rename the repo, turn on GitHub Pages, and use this as your homepage without needing React, npm, or a framework.
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Visual storytelling</div>
+            <h2>A homepage layout that already feels like a finished brand.</h2>
+          </div>
+          <p class="section-copy">
+            These blocks are designed like premium placeholders, so the website looks expensive even before you add photography.
           </p>
-          <div class="features" style="grid-template-columns: 1fr; gap: 14px; margin-top: 18px;">
-            <div class="feature" style="padding: 20px; box-shadow: none; background: rgba(255,255,255,0.62);">
-              <h4 style="font-size: 18px; margin-bottom: 8px;">Best next upgrades</h4>
-              <p>Add real jar photography, a logo, opening hours, a simple enquiry form, and a product gallery.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <div class="label" style="color:#ffe2a1;">Hero image space</div>
+            <h3>Jar photography, honey pours, or a farm shot.</h3>
+            <p>This large feature panel is ideal for a future lifestyle image, hero product photo, or brand campaign headline.</p>
+            <div class="pill-row">
+              <span class="pill">Premium</span>
+              <span class="pill">Warm</span>
+              <span class="pill">Golden</span>
             </div>
-            <div class="feature" style="padding: 20px; box-shadow: none; background: rgba(255,255,255,0.62);">
-              <h4 style="font-size: 18px; margin-bottom: 8px;">Great for GitHub Pages</h4>
-              <p>Just keep this file as <code>index.html</code> in the root of your repo, then publish the site.</p>
+          </article>
+
+          <article class="gallery-card light">
+            <div class="label">Social proof</div>
+            <h3 style="font-size:34px;">Local and highly rated.</h3>
+            <p>Use this area for reviews, a market quote, or a short founder story once you want more trust-building content.</p>
+          </article>
+
+          <article class="gallery-card light">
+            <div class="label">Brand texture</div>
+            <h3 style="font-size:34px;">Soft luxury, not overdesigned.</h3>
+            <p>The look stays clean, natural, and elevated so it feels authentic to a real honey farm.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="container info-grid">
+        <article class="quote-card">
+          <div class="quote-stars">★★★★★</div>
+          <div class="quote-big">Made to look premium on screen and easy to use in real life.</div>
+          <p>
+            This final version is stronger visually, better balanced, and closer to something you would genuinely publish for a small luxury food brand.
+          </p>
+
+          <div class="sub-grid">
+            <div class="sub-card">
+              <strong>Great next upgrades</strong>
+              Add real product photography, a logo, market dates, FAQs, and a small enquiry form.
+            </div>
+            <div class="sub-card">
+              <strong>Perfect for GitHub Pages</strong>
+              Keep this as <code>index.html</code> in the repo root and publish directly as a static site.
             </div>
           </div>
         </article>
 
-        <aside class="contact-panel">
-          <div class="label" style="color:#ffdf95;">Visit or contact</div>
-          <h3 style="margin: 6px 0 10px; font-size: 38px; line-height: 1.02; letter-spacing: -0.04em;">Get in touch with Cromer Honey Farm.</h3>
-          <p class="text-muted" style="margin-top: 0; font-size: 17px;">
-            A warm local presence in Vineyard, NSW, with direct phone contact and simple social discovery.
+        <aside class="contact-box">
+          <div class="label" style="color:#ffd98a;">Visit or contact</div>
+          <h3 style="font-size:40px; line-height:0.98; margin-bottom:12px;">Get in touch with Cromer Honey Farm.</h3>
+          <p>
+            Direct, local, and easy to reach for enquiries, pickups, or product questions.
           </p>
 
           <div class="contact-list">
@@ -781,9 +1032,9 @@
             </div>
           </div>
 
-          <div class="hero-actions" style="margin: 0;">
-            <a class="btn btn-primary" href="tel:0400025505" style="background: linear-gradient(135deg, #ffd86d, #e7ae2a); color:#3a2408; box-shadow:none;">Call the Farm</a>
-            <a class="btn btn-secondary" href="https://maps.google.com/?q=225+Windsor+Rd,+Vineyard+NSW+2765" target="_blank" rel="noreferrer" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color:white;">Get Directions</a>
+          <div class="hero-actions" style="margin:0;">
+            <a class="btn btn-primary" href="tel:0400025505" style="background: linear-gradient(135deg, #ffd86c, #edae28); color:#3c2307; box-shadow:none;">Call the Farm</a>
+            <a class="btn btn-secondary" href="https://maps.google.com/?q=225+Windsor+Rd,+Vineyard+NSW+2765" target="_blank" rel="noreferrer" style="background: rgba(255,255,255,0.08); color:white; border-color: rgba(255,255,255,0.16);">Get Directions</a>
           </div>
         </aside>
       </div>
